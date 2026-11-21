@@ -581,6 +581,54 @@ body::selection { background: var(--gold); color: var(--ink); }
 .nav-toggle { display: none; width: 44px; height: 44px; border: 1px solid rgba(201,162,39,.3); border-radius: 999px; background: transparent; }
 .nav-toggle span { display:block; width:18px; height:1px; background:var(--goldlt); margin:5px auto; transition:.3s; }
 
+.organization-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 36px;
+}
+.organization-heading .lead {
+  max-width: 420px;
+  margin: 0 0 4px;
+  text-align: right;
+}
+.organization-card {
+  overflow: hidden;
+  border: 1px solid rgba(201,162,39,.38);
+  border-radius: 24px;
+  background: #f7f7f3;
+  box-shadow: 0 30px 70px -38px rgba(0,0,0,.75);
+}
+.organization-card img {
+  width: 100%;
+  max-height: 720px;
+  object-fit: contain;
+  background: #fff;
+}
+.organization-card figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 58px;
+  padding: 12px 22px;
+  border-top: 1px solid rgba(201,162,39,.28);
+  background: var(--pine);
+}
+.organization-card figcaption span {
+  font-family:"Cinzel",Georgia,serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--goldglow);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.organization-card figcaption small {
+  color: var(--sagemut);
+  text-align: right;
+}
+
 @keyframes shine { 0%{left:-80%} 55%,100%{left:130%} }
 @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 @keyframes fadeUp { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
@@ -887,4 +935,24 @@ body::selection { background: var(--gold); color: var(--ink); }
   .gallery-arrow--next { right: 8px; }
   .gallery-arrow { width: 42px; height: 42px; }
   .map-card iframe { height: 360px; }
+  .organization-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .organization-heading .lead {
+    max-width: none;
+    text-align: left;
+  }
+  .organization-card {
+    border-radius: 16px;
+  }
+  .organization-card figcaption {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 14px 16px;
+  }
+  .organization-card figcaption small {
+    text-align: left;
+  }
 }
